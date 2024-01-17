@@ -26,9 +26,9 @@ class Manager extends Employee
     {
         if(!super.equals(otherObject)) return false;
         var other = (Manager) otherObject;
-        //В методе super.equals() проверяется,
-        //принадлежат ли объекты, доступные по
-        //ссылкам this и other, одному и тому же классу
+        // in the super.equals() method it is checked
+        // whether objects accessible by
+        // links this and other, to the same class
         return bonus == other.bonus;
     }
 

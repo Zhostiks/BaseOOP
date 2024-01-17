@@ -38,26 +38,26 @@ public class Employee extends Person {
     }
 
     public boolean equals(Object otherObject) {
-        //быстро проверить объекты на идентичность
+        // quickly check objects for identity
         if (this == otherObject) return true;
 
-        //если явный параметр имеет пустое значение null,
-        //должно быть возвращено логическое значение false
+        // if the explicit parameter is null,
+        // must return a boolean value false
 
         if (otherObject == null)
             return false;
 
-        //если классы не совпадают они не равны
+        // if the classes do not match they are not equal
 
         if (getClass() != otherObject.getClass())
             return false;
 
-        //теперь известно, что otherObject - это
-        //непустой объект типа Employee
+        // it is now known that otherObject is
+        // non-empty object of type Employee
 
         var other = (Employee) otherObject;
 
-        //проверить, содержат ли поля одинаковые значения
+        // check if fields contain the same values
 
         return Objects.equals(name, other.name)
                 &&salary == other.salary
